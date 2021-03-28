@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bootstrap4 Template</title>
+  <link href="css/v4/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light" style="padding-top:4.5rem;">
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <span class="font-weight-bold">Bootstrap4</span>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-2">
+          <div class="card-header">
+            ドキュメントの<a href="https://getbootstrap.jp/docs/5.0/layout/grid/#how-it-works">How it works</a>から引用
+          </div>
+          <div class="card-body">
+            <div>行は列のラッパーです。 各列には、列間のスペースを制御するための水平方向の padding（ガターと呼ばれます）があります。</div>
+            <div>このpaddingは、負のマージンを持つ行で打ち消されて、列のコンテンツが視覚的に左側に揃うようにします。 </div>
+            <div>行はコンテンツの間隔を変更するために uniformly apply column sizing や gutter classes を使用してコンテンツの間隔を変更する修飾子クラスもサポートします。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card mb-2">
+          <div class="card-header">
+            レイアウトのサンプル
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="my-2">
+                  <span class="d-block text-white text-center bg-info">col-md-4</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="my-2">
+                  <span class="d-block text-white text-center bg-info">col-md-4</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-4">
+                    <div class="my-2">
+                      <span class="d-block text-white text-center bg-success">col-4</span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="my-2">
+                      <span class="d-block text-white text-center bg-success">col-4</span>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="my-2">
+                      <span class="d-block text-white text-center bg-success">col-4</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="my-2">
+                  <span class="d-block text-white text-center bg-info">col-md-4</span>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="my-2">
+                      <span class="d-block text-white text-center bg-warning">col-6</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="my-2">
+                      <span class="d-block text-white text-center bg-warning">col-6</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="my-2">
+                      <span class="d-block text-white text-center bg-warning">col-6</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            コード
+          </div>
+          <div class="card-body">
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;title&gt;Bootstrap4 Template&lt;/title&gt;
+  &lt;link href=&quot;css/v4/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;bg-light&quot; style=&quot;padding-top:4.5rem;&quot;&gt;
+  &lt;nav class=&quot;navbar navbar-light bg-light fixed-top&quot;&gt;
+    &lt;span class=&quot;font-weight-bold&quot;&gt;Bootstrap4&lt;/span&gt;
+  &lt;/nav&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-12&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;div class=&quot;card-header&quot;&gt;
+            レイアウトのサンプル
+          &lt;/div&gt;
+          &lt;div class=&quot;card-body&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;div class=&quot;my-2&quot;&gt;
+                  &lt;span class=&quot;d-block text-white text-center bg-info&quot;&gt;col-md-4&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;div class=&quot;my-2&quot;&gt;
+                  &lt;span class=&quot;d-block text-white text-center bg-info&quot;&gt;col-md-4&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                  &lt;div class=&quot;col-4&quot;&gt;
+                    &lt;div class=&quot;my-2&quot;&gt;
+                      &lt;span class=&quot;d-block text-white text-center bg-success&quot;&gt;col-4&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-4&quot;&gt;
+                    &lt;div class=&quot;my-2&quot;&gt;
+                      &lt;span class=&quot;d-block text-white text-center bg-success&quot;&gt;col-4&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-4&quot;&gt;
+                    &lt;div class=&quot;my-2&quot;&gt;
+                      &lt;span class=&quot;d-block text-white text-center bg-success&quot;&gt;col-4&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;div class=&quot;my-2&quot;&gt;
+                  &lt;span class=&quot;d-block text-white text-center bg-info&quot;&gt;col-md-4&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;col-md-8&quot;&gt;
+                &lt;div class=&quot;row&quot;&gt;
+                  &lt;div class=&quot;col-6&quot;&gt;
+                    &lt;div class=&quot;my-2&quot;&gt;
+                      &lt;span class=&quot;d-block text-white text-center bg-warning&quot;&gt;col-6&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-6&quot;&gt;
+                    &lt;div class=&quot;my-2&quot;&gt;
+                      &lt;span class=&quot;d-block text-white text-center bg-warning&quot;&gt;col-6&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;col-6&quot;&gt;
+                    &lt;div class=&quot;my-2&quot;&gt;
+                      &lt;span class=&quot;d-block text-white text-center bg-warning&quot;&gt;col-6&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.slim.min.js&quot; integrity=&quot;sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&quot; integrity=&quot;sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&quot; integrity=&quot;sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+          </code>
+        </pre>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

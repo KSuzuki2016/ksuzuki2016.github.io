@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Bootstrap4 Template</title>
+  <link href="css/v4/bootstrap.min.css" rel="stylesheet">
+</head>
+<body style="padding-top:4.5rem;">
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <span class="font-weight-bold">Bootstrap4</span>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <h2>Bootstrapのグリッドシステムについて</h2>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                俺自身そろそろBootstrap初心者じゃ無くなって来たかなーってレベルだから間違ってるのは俺の方かもしれないが
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h3 class="text-danger">
+                  このページ非常に良くないので参考にしない様に
+                </h3>
+                <p>
+                  <a href="https://www.yutaliberty.com/2019/04/18/prog/1624/">【Bootstrap】.container、.row、.colの隙間(margin、padding)について考える。ついでに好きな画像をborderにする小技も紹介！</a>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <span>ここはバージョン関係なくグリッドシステムに関して一番最初に知るべき事が書いてあると思う</span>
+                <p><a href="https://www.xmisao.com/2013/10/20/bootstrap-container-row-col-tips.html">Twitter Bootstrapのcontainer、row、col(span)の正しい使い方</a></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <span>簡単なサンプル作った</span>
+                <p><a href="grid.html" target="_blank">Bootstrap4のレイアウト</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <h3>どこが問題なのかって言うと</h3>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div>初心者がつまずくであろうレイアウトの微調整に関する記事なので初心者ホイホイになっちゃう</div>
+              </li>
+              <li class="list-group-item">
+                <div>
+                  <p>日付から見てBootstrap4準拠のはず (バージョンの記載がないので判断ができない)</p>
+                  <p>Bootstrap3とBootstrap4は別物って思ったほうがいい位に変わってるから混乱する</p>
+                </div>
+                <div>
+                  <h5>同じ表示になる様にした基本テンプレート</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-1"><a href="template/v3/index.html" target="_blank">Bootstrap3</a></li>
+                    <li class="list-group-item py-1"><a href="template/v4/index.html" target="_blank">Bootstrap4</a></li>
+                    <li class="list-group-item py-1"><a href="template/v5/index.html" target="_blank">Bootstrap5</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div>調整する際の記法はBootstrap3ぽい？</div>
+                <div>幅調整に<b>px</b>を使ってるのでそうかなと、4以降でどうしてもやる場合は<b>rem</b></div>
+                <div>それ以外は基本的にclassを追加して調整、該当のclassがない場合はcssファイル作って読み込む形にする</div>
+              </li>
+              <li class="list-group-item">
+                <div>対応方法が自分さえよければ他人がどうなろうが知ったこっちゃないって方法で解決している</div>
+                <div>調整をインラインでしちゃってる部分が最悪、これやっちゃうとカラム内のコンポーネントが再利用不可能になる</div>
+              </li>
+              <li class="list-group-item">
+                <p>
+                  Bootstrap開発者に敬意がない、それどころか文句言う始末
+                </p>
+                <div class="ml-2">
+                  <p class="mb-1 font-weight-bold">厄介って言い方何なんだろう？開発者に対して失礼にもほどがある</p>
+                  <p class="pl-2 text-muted border-primary" style="border-left-width: 0.25rem;border-left-style: solid;">
+                    Bootstrapのグリッドシステムって便利ですけど、隙間系(marginとpadding)が厄介ですよね。
+                  </p>
+                </div>
+
+                <div class="ml-2">
+                  <p class="mb-1 font-weight-bold">自分で火を付けて問題ってマッチポンプもいい所</p>
+                  <p class="pl-2 text-muted border-primary" style="border-left-width: 0.25rem;border-left-style: solid;">
+                    3.起こりうる問題
+                  </p>
+                </div>
+
+                <div class="ml-2">
+                  <p class="mb-1 font-weight-bold">今日のお前が言うなスレはここですか</p>
+                  <p class="pl-2 text-muted border-primary" style="border-left-width: 0.25rem;border-left-style: solid;">
+                    Bootstrapは便利ですが隙間系に頭を悩まされることがしばしばあるので一度はしっかり勉強しておいたほうが良さそうですね！
+                  </p>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
