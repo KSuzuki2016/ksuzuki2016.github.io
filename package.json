@@ -12,6 +12,7 @@
     "production" : "mix --production",
     "prepare" : "husky",
     "copy" : "cpx -C \"public/**\" docs",
+    "copy-dev" : "cpx -C \"public/**\" docs/0fff9bde-af7d-4794-bdf7-470a258c195f",
     "serve" : "serve public/",
     "lint" : "htmllint --cwd public"
   },
