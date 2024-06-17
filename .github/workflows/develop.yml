@@ -3,7 +3,8 @@ name: Copy public to develop directory
 on:
   push:
     branches:
-      - `develop/**`
+      - develop/**
+      - afiina/**
 
 concurrency:
   group: "pages"
