@@ -1,0 +1,28 @@
+name: Pull Main to Develop
+
+on:
+  workflow_dispatch:
+
+jobs:
+  pull-main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: develop
+          token: ${{ secrets.ACCESSTOKEN }}
+      - name: Pull Main to Develop
+        shell: bash
+        run: |
+          git config user.name $GIT_NAME
+          git config user.email $GIT_EMAIL
+          git fetch
+          git pull origin main
+          git branch
+          git push
+          gh workflow run jekyll-gh-pages.yml --ref main
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }}
+          GIT_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_NAME: github-actions[bot]

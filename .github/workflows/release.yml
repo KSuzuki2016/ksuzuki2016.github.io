@@ -1,0 +1,36 @@
+name: Release action after PR to main
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release-preparation:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [ 20.x ]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run production
+      - run: npm run copy
+      - name: Create PR
+        shell: bash
+        run: |
+          git config user.name $GIT_NAME
+          git config user.email $GIT_EMAIL
+          git add -A ./docs/.
+          git commit -m "Copy file public to docs"
+          git push
+          gh pr create --head release --base main --title "Create From Release Branch Job" --body "Workflow Job" -l "merge-it"
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }}
+          GIT_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_NAME: github-actions[bot]

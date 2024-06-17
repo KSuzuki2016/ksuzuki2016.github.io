@@ -1,0 +1,42 @@
+name: Bump version after call merge-main.yml
+
+on:
+  pull_request:
+    branches:
+      - main
+    types: [ closed ]
+
+jobs:
+  bump-version:
+    name: Bump version
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.2
+        with:
+          github_token: ${{ secrets.ACCESSTOKEN }}
+          tag_prefix: ""
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+  call-workflow:
+    needs: bump-version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Call Workflow
+        shell: bash
+        run: |
+          gh workflow run merge-main.yml --ref main
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }}
+          GIT_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_NAME: github-actions[bot]

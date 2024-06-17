@@ -1,0 +1,37 @@
+name: Create Release after call release.yml
+
+on:
+  pull_request:
+    branches:
+      - develop
+    types: [ closed ]
+
+jobs:
+  create-release:
+    if: github.event.pull_request.merged == true && github.head_ref != 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Create Release Branch
+        uses: peterjgrainger/action-create-branch@v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }}
+        with:
+          branch: 'release'
+  call-workflow:
+    needs: create-release
+    if: github.head_ref != 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Call Workflow
+        shell: bash
+        run: |
+          gh workflow run release.yml --ref release
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }}
+          GIT_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_NAME: github-actions[bot]

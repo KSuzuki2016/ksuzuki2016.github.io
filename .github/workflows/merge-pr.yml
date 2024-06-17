@@ -1,0 +1,20 @@
+name: Auto merge PR
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+    types: [ opened ]
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: merge a pull request
+        uses: sudo-bot/action-pull-request-merge@v1.2.0
+        with:
+          github-token: ${{ secrets.ACCESSTOKEN }}
+          number: ${{ github.event.pull_request.number }}
+          allowed-usernames-regex: ^(github-actions|KSuzuki2016)$
+          filter-label: merge-it
